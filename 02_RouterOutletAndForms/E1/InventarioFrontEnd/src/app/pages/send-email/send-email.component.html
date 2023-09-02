@@ -1,0 +1,27 @@
+<div class="container">
+    <form  [formGroup]="formMensaje" (ngSubmit)="onSubmitForm()">
+        <mat-form-field appearance="outline" class="col-md-6 mb-4">
+            <mat-label>Firt Name</mat-label>
+            <input matInput placeholder="Insert your Name" formControlName="name">
+          </mat-form-field>
+          
+          <mat-form-field appearance="outline" class="col-md-6 mb-4">
+            <mat-label>Last Name</mat-label>
+            <input matInput placeholder="Insert your Last Name" formControlName="lastName">
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" class="col-md-12 mb-4">
+            <mat-label>Email</mat-label>
+            <input type="email" matInput placeholder="email@examle.com" formControlName="email">
+          </mat-form-field>
+
+        <mat-form-field appearance="outline" class="col-md-12 mb-4">
+            <mat-label>Mensaje</mat-label>
+            <textarea matInput formControlName="mensaje"></textarea>
+          </mat-form-field>
+          <div class="d-flex justify-content-center">
+            <button type="submit" mat-raised-button color="primary" [disabled]="formMensaje.invalid" class="col-md-4">Send</button>
+          </div>
+      </form>
+      
+</div>
